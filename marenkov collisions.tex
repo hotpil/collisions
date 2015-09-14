@@ -1,0 +1,94 @@
+\documentclass[14pt]{beamer}
+\usetheme{Copenhagen}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{bm}
+\author{Маренков Е.Д.}
+\title{Парные столкновения}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\begin{frame}{Задача двух тел}
+
+Чтобы определить движение двух тел, взаимодействующих с потенциалом $U(|\bm{r}_1-\bm{r}_2|)$, надо исходить из функции Лагранжа:
+\begin{equation}
+L=\frac{m\dot{\bm{r}_1}^2}{2} + \frac{m\dot{\bm{r}_1}^2}{2}
+-U(r)
+\end{equation}
+$\bm{r}=\bm{r}_1=\bm{r}_2$
+В системе центра масс:
+\begin{equation}
+L_c=\frac{\mu \bm{v}^2}{2} - U(r)
+\end{equation}
+$\mu=m_1m_2/(m_1+m_2)$ -- приведенная масса, $\bm{v}=\bm{v}_1-\bm{v}_2$ --- относительная скорость.
+
+\end{frame}
+
+\begin{frame}{Задача двух тел}
+
+\alert{Вместо решения уравнений движения для двух тел можно решить задачу о движении одного тела с приведенной массой в центральном поле $U(r)$. }
+
+Возврат в лабораторную систему:
+\begin{equation}
+\bm{r}_1=\frac{m_2}{m_1+m_2}\bm{r}, \quad 
+\bm{r}_2=-\frac{m_1}{m_1+m_2}\bm{r}
+\end{equation}
+
+Зная $\bm{r}(t)$, можно определить по этим формулам $\bm{r}_1(t)$ и $\bm{r}_2(t)$
+
+
+\end{frame}
+
+\begin{frame}{Движение в центральном поле}
+
+Момент импульса направлен перпендикулярно плоскости движения (ось $z$) и сохраняется: $M=M_z=m\bm{r}^2\dot{\phi}=const$. Полная энергия также сохраняется:
+\begin{equation}
+E=\frac{m\dot{r}^2}{2} + U_{eff}(r)
+\label{eq:E}
+\end{equation}
+$U_{eff}=\frac{M^2}{2mr^2}+U(r)$ --- эффективная потенциальная энергия. 
+
+
+\alert{Двухмерное движение свелось к одномерному в поле с эффективной потенциальной энергией}
+
+\end{frame}
+
+\begin{frame}{Движение в центральном поле}
+Уравнение \eqref{eq:E} интегрируется в общем виде:
+\begin{equation}
+t=\int \frac{dr}{\sqrt{\frac{2}{m}[E-U(r)]-\frac{M^2}{m^2r^2}}} + const
+\end{equation}
+
+Из-за сохранения момента
+\begin{equation*}
+d\phi=\frac{M}{mr^2}dt
+\end{equation*}
+
+Поэтому
+\begin{equation}
+\phi=\int \frac{(M/r^2)dr}{\sqrt{2m[E-U(r)]-M^2/r^2}} + const
+\end{equation}
+
+\end{frame}
+
+
+
+\end{document}
